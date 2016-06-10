@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  *
  * @author stormning on 16/6/10.
  */
-@ConfigurationProperties(prefix = "spring.jpa")
+@ConfigurationProperties(prefix = "spring.jpa.extra")
 public class SpringJpaProperties {
 
     private String templateLocation;
