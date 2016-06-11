@@ -2,6 +2,8 @@ package com.slyak.spring;
 
 import com.slyak.spring.jpa.FreemarkerSqlTemplates;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.AutoConfigureAfter;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +15,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @EnableConfigurationProperties(SpringJpaExtraProperties.class)
+@AutoConfigureAfter({ DataSourceAutoConfiguration.class })
 public class JpaExtraAutoConfiguration {
 
     @Autowired
