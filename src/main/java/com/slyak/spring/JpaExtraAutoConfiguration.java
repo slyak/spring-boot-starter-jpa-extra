@@ -26,6 +26,7 @@ public class JpaExtraAutoConfiguration {
         FreemarkerSqlTemplates sqlTemplates = new FreemarkerSqlTemplates();
         sqlTemplates.setTemplateBasePackage(springJpaProperties.getTemplateBasePackage());
         sqlTemplates.setTemplateLocation(springJpaProperties.getTemplateLocation());
+        sqlTemplates.setSuffix(".sftl");
         return sqlTemplates;
     }
 }
