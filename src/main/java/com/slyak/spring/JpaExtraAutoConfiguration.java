@@ -18,15 +18,21 @@ import org.springframework.context.annotation.Configuration;
 @AutoConfigureAfter({ DataSourceAutoConfiguration.class })
 public class JpaExtraAutoConfiguration {
 
-    @Autowired
-    private SpringJpaExtraProperties springJpaProperties;
+	@Autowired
+	private SpringJpaExtraProperties springJpaProperties;
 
-    @Bean
-    protected FreemarkerSqlTemplates freemarkerSqlTemplates() {
-        FreemarkerSqlTemplates sqlTemplates = new FreemarkerSqlTemplates();
-        sqlTemplates.setTemplateBasePackage(springJpaProperties.getTemplateBasePackage());
-        sqlTemplates.setTemplateLocation(springJpaProperties.getTemplateLocation());
-        sqlTemplates.setSuffix(".sftl");
-        return sqlTemplates;
-    }
+	@Bean
+	protected FreemarkerSqlTemplates freemarkerSqlTemplates() {
+		FreemarkerSqlTemplates sqlTemplates = new FreemarkerSqlTemplates();
+		String templateBasePackage = springJpaProperties.getTemplateBasePackage();
+		if (templateBasePackage != null) {
+			sqlTemplates.setTemplateBasePackage(templateBasePackage);
+		}
+		String templateLocation = springJpaProperties.getTemplateLocation();
+		if (templateLocation != null) {
+			sqlTemplates.setTemplateLocation(templateLocation);
+		}
+		sqlTemplates.setSuffix(".sftl");
+		return sqlTemplates;
+	}
 }
