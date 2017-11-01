@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>spring-boot-starter-jpa-extra</artifactId>
-    <version>2.0.1.RELEASE</version>
+    <version>2.1.0.RELEASE</version>
     <packaging>jar</packaging>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>Spring boot starter for spring-boot-starter-jpa-extra</description>
@@ -13,7 +13,7 @@
     <parent>
         <groupId>com.slyak</groupId>
         <artifactId>slyak-parent</artifactId>
-        <version>1.1.0.RELEASE</version>
+        <version>1.3.0.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
