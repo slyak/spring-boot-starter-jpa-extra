@@ -77,10 +77,6 @@
         <url>git@github.com:slyak/spring-boot-starter-jpa-extra.git</url>
     </scm>
 
-    <properties>
-        <spring-data-jpa-extra-version>${project.version}</spring-data-jpa-extra-version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
